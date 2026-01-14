@@ -14,9 +14,20 @@ export default defineConfig({
           'ui-vendor': ['lucide-react', 'recharts'],
         },
       },
+      // Explicitly exclude server files from build
+      external: [
+        /^jsr:/,
+        /^npm:/,
+      ],
     },
   },
   optimizeDeps: {
     exclude: [],
+  },
+  server: {
+    fs: {
+      // Don't serve files from supabase directory
+      deny: ['**/supabase/**'],
+    },
   },
 });

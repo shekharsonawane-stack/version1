@@ -27,12 +27,18 @@
     }
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx"
+    "*.ts",
+    "*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "contexts/**/*.ts",
+    "contexts/**/*.tsx",
+    "utils/**/*.ts",
+    "utils/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "supabase/functions"
+    "supabase"
   ]
 }
